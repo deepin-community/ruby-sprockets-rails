@@ -1,0 +1,36 @@
+Source: ruby-sprockets-rails
+Section: ruby
+Priority: optional
+Maintainer: Debian Ruby Team <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Uploaders: Utkarsh Gupta <guptautkarsh2102@gmail.com>
+Build-Depends: debhelper-compat (= 13),
+               gem2deb (>= 1),
+               rake,
+               ruby-actionpack (>= 2:5.2),
+               ruby-activesupport (>= 2:5.2),
+               ruby-railties (>= 2:5.2),
+               ruby-sass,
+               ruby-sprockets (>= 3.0.0),
+               ruby-terser
+Standards-Version: 4.6.1
+Vcs-Git: https://salsa.debian.org/ruby-team/ruby-sprockets-rails.git
+Vcs-Browser: https://salsa.debian.org/ruby-team/ruby-sprockets-rails
+Homepage: https://github.com/rails/sprockets-rails
+Testsuite: autopkgtest-pkg-ruby
+XS-Ruby-Versions: all
+Rules-Requires-Root: no
+
+Package: ruby-sprockets-rails
+Architecture: all
+XB-Ruby-Versions: ${ruby:Versions}
+Depends: ${misc:Depends},
+         ${ruby:Depends},
+         ${shlibs:Depends}
+Description: Sprockets Rails integration (part of Rails)
+ This package provides Sprockets implementation for Rails 4.x (and
+ beyond) Asset Pipeline.
+ .
+ If the basic tasks don't do all that you need, it's straight forward to
+ redefine them and replace them with something more specific to your app.
+ .
+ You can also redefine the task with the built in task generator.
